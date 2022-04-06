@@ -10,7 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
-        fields = {"id","first_name", "last_name", "phone", "email", "message"}
+        fields = {"id", "user","first_name", "last_name", "phone", "email", "message"}
 
 class BusinessEventSerializer(serializers.Model):
     class Meta:
