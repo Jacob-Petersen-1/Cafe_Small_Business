@@ -8,12 +8,12 @@ class Customer(models.Model):
     message = models.CharField(max_length=280)
 
 
-class BusinessCalendar(models.Model):
+class BusinessEvent(models.Model):
     title = models.CharField(max_length=20)
     start_event = models.DateField()
     end_event = models.DateField()
 
-class PersonalCalendar(models.Model):
+class PersonalEvent(models.Model):
     title = models.CharField(max_length=20)
     start_event = models.DateField()
     end_event = models.DateField()
