@@ -17,7 +17,7 @@ from .serializers import  CustomerSerializer
 class CustomerMessages(APIView):
         
     def get(self, request):
-        messages = Customer.objects.filter(message)
+        messages = Customer.objects.all()
         serializer = CustomerSerializer(messages, many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
 
