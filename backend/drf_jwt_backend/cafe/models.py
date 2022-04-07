@@ -11,11 +11,13 @@ class Customer(models.Model):
 
 
 class BusinessEvent(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
     title = models.CharField(max_length=20)
     start_event = models.DateField()
     end_event = models.DateField()
 
 class PersonalEvent(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
     title = models.CharField(max_length=20)
     start_event = models.DateField()
     end_event = models.DateField() 

@@ -35,20 +35,27 @@ class SendMessage(APIView):
         return Response(serializer.data,status=status.HTTP_201_CREATED)
 
 @permission_classes([AllowAny])
-class GetBusinessEvents(APIView):
+class BusinessEvents(APIView):
 
     def get(self,request):
         events = BusinessEvent.objects.all()
         serializer = BusinessEventSerializer(events,many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
     
+    
 
 
 @permission_classes([IsAuthenticated])
-class GetPersonalEvents(APIView):
+class PersonalEvents(APIView):
 
     def get(self,request):
         events = PersonalEvent.objects.all()
         serializer = PersonalEventSerializer(events,many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
 
+    def post(self, request):
+        serializers = BusinessEventSerializer(data=request.data)
+        # the following validates that API user input is true or accurate to the database
+        serializers.is_valid(raise_exception=True)
+        serializers.save(user=request.user)
+        return Response(serializers.data, status=status.HTTP_201_CREATED)
