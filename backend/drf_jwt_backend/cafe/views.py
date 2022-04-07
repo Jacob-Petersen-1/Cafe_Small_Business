@@ -7,8 +7,8 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.decorators import permission_classes
 from rest_framework.views import APIView
-from .models import Customer,BusinessEvent,PersonalEvent
-from .serializers import  CustomerSerializer 
+from .models import Customer,BusinessEvent,PersonalEvent,User
+from .serializers import  CustomerSerializer
 # BusinessEventSerializer, PersonalEventSerializer
 
 
@@ -21,4 +21,16 @@ class CustomerMessages(APIView):
         serializer = CustomerSerializer(messages, many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
 
+
+@permission_classes([AllowAny]) #Further Testing Needed
+class SendMessage(APIView):
+
+    def post(self,request,pk):
+        user_id = pk
+        temp_data = request.data
+        temp_data['user_id'] = user_id
+        serializer = CustomerSerializer(data=temp_data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(user=request.user)
+        return Response(serializer.data,status=status.HTTP_201_CREATED)
 
