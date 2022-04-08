@@ -17,12 +17,12 @@ class CustomerSerializer(serializers.ModelSerializer):
 class BusinessEventSerializer(serializers.ModelSerializer):
     class Meta:
         model = BusinessEvent
-        fields = ["id","title","start_event","end_event"]
+        fields = ["id","title","start","end"]
 
 class PersonalEventSerializer(serializers.ModelSerializer):
     class Meta:
         model = PersonalEvent
-        fields = ["id","title","start_event","end_event"]
+        fields = ["id","title","start","end"]
 
 customer_id = serializers.IntegerField(write_only = True)
 
