@@ -1,14 +1,17 @@
 import React, { useState,useEffect } from 'react';
 import axios from "axios"
 import Calendar from '../../components/Calendar/Calendar';
+import NaviBar from '../../components/NaviBar/NaviBar';
 
 const LandingPage = () => {
 
     
     return ( 
-        <div>
-            <div>Landing Page</div>
-            <Calendar/>
+        <div className='landing-container'>
+            <div className='landing-top'>
+                <NaviBar/>
+            </div>
+
             
             
             
@@ -16,5 +19,4 @@ const LandingPage = () => {
     
      )
 }
-<div>Landing Page</div> 
 export default LandingPage;
