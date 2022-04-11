@@ -8,6 +8,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage"
 import DashBoardPage from "./pages/DashBoardPage/DashBoardPage"
 import LandingPage from "./pages/LandingPage/LandingPage";
+import EventPage from "./pages/EventPage/EventPage";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -28,6 +29,7 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route path="/events" element = {<EventPage/>}/>
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/login" element={<LoginPage />} />
       </Routes>
