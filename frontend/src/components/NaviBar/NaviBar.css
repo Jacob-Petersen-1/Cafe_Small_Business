@@ -1,4 +1,5 @@
-.nav-container{
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.navbar{
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
@@ -8,17 +9,26 @@
 }
 
 .logo-image{
-    max-height: 250px ;
+    max-height: 300px ;
 }
 
 
 .link-left{
-    margin-top: 10rem;
+    margin-top: 8rem;
+    max-width: 100%;
 }
 .link-right{
-    margin-top: 10rem;
+    margin-top: 8rem;
+    max-width: 100%;
 }
 
 li{
-    padding: 1rem;
+    padding: 6rem;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
 }
+
+a{
+    color: black;
+}
+ 
