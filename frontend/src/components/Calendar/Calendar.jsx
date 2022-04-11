@@ -8,23 +8,30 @@ import "./Calendar.css"
 
 const Calendar = () => {
  const [events, setEvents] = useState([]);
- const[titles, setTitles] = useState("");
- const[dates, setDates] = useState("");
-    
+ const[titles, setTitles] = useState("");//Unused
+ const[dates, setDates] = useState(""); //Unused
+ 
+ 
+
+
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-              let response = await axios.get("http://127.0.0.1:8000/business/events/");
-              setEvents(response.data);
+              let response = await axios.get("http://127.0.0.1:8000/business/events/"); //Data from Database unprotected
+              let formatData = events.map( (e) => {
+                return {id:e.id.toString(), title:e.title, start: e.start, end: e.end}
+               })
+               console.log(formatData)
+              setEvents(formatData);
             } catch (error) {
               console.log(error.message);
             }
           };
-          fetchEvents();
+      fetchEvents();
         console.log("EVENT DATA:",events)
     }, []);
     
-    
+  
     
     return ( 
         <div className="calendar">
@@ -39,7 +46,8 @@ const Calendar = () => {
                 initialView='dayGridMonth'
                 editable={true}
                 selectable={true}
-                selectMirror={true}/>
+                selectMirror={true}
+                events={events}/>
                
 
             </div>
