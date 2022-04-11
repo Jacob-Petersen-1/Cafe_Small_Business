@@ -6,8 +6,8 @@ const NaviBar = () => {
         <div className="navbar">
             <div className="nav-left">
                 <ul className="link-left">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
+                    <li><a href="home" className="link">Home</a></li>
+                    <li><a href="about" className="link">About</a></li>
                 </ul>
             </div>
             <div className="nav-center">
@@ -15,8 +15,8 @@ const NaviBar = () => {
             </div>
             <div className="nav-right">
                 <ul className="link-right">
-                    <li><a href="contact">Contact</a></li>
-                    <li><Link to="/events">Events</Link></li>
+                    <li><a href="contact" className="link">Contact</a></li>
+                    <li><Link to="/events" className="link">Events</Link></li>
                 </ul>
             </div>
         </div>

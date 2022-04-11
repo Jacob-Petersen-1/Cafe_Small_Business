@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    background-color: #fffcf9 ;
+    background-color: rgb(32,39,56) ;
     align-items: center;
     justify-content: center;
 }
@@ -27,8 +27,8 @@ li{
     font-family: 'Bebas Neue', cursive;
 }
 
-a{
-    color: black;
+.link{
+    color: whitesmoke;
     font-size: 50px;
 }
  
