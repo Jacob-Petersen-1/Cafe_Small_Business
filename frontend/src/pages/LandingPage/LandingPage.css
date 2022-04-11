@@ -1,0 +1,13 @@
+.landing-body{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.column{
+    display: flex;
+    float:left;
+    width: 33.33%;
+    padding:10px;
+    height: 1000px;
+}
