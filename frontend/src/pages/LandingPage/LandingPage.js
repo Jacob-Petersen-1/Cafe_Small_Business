@@ -3,6 +3,7 @@ import axios from "axios";
 import Calendar from "../../components/Calendar/Calendar";
 import NaviBar from "../../components/NaviBar/NaviBar";
 import CartLocator from "../../components/CartLocator/CartLocator";
+import MarkerForm from "../../components/MarkerForm/MarkerForm";
 import "./LandingPage.css";
 
 const LandingPage = () => {
@@ -15,6 +16,8 @@ const LandingPage = () => {
         <div className="sidebar">
             <h1>Cart Locator</h1>
             <CartLocator />
+            <MarkerForm />
+
         </div>
         <div className="picture-body">
             <h1>Photo</h1>
