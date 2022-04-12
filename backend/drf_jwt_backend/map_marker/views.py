@@ -9,7 +9,7 @@ from rest_framework.permissions import AllowAny
 from django.shortcuts import get_object_or_404
 
 @permission_classes([AllowAny])
-class Marker(APIView):
+class MapMarker(APIView):
 
     def get(self,request):
         markers = Marker.objects.all()
@@ -19,7 +19,7 @@ class Marker(APIView):
     def post(self,request):
         serializers = MarkerSerializer(data=request.data)
         serializers.is_valid(raise_exception=True)
-        serializers.save(user=request.user)
+        serializers.save()
         return Response(serializers.data, status=status.HTTP_201_CREATED)
     
     def delete(self,request,pk,format=None):

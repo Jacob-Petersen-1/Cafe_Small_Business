@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'authentication.apps.AuthenticationConfig',
     'corsheaders',
     'cafe',
+    'map_marker',
 ]
 
 MIDDLEWARE = [
