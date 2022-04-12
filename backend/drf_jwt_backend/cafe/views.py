@@ -46,7 +46,6 @@ class BusinessEventUpdate(APIView):
 
       def post(self, request):
         serializers = BusinessEventSerializer(data=request.data)
-        # the following validates that API user input is true or accurate to the database
         serializers.is_valid(raise_exception=True)
         serializers.save(user=request.user)
         return Response(serializers.data, status=status.HTTP_201_CREATED)

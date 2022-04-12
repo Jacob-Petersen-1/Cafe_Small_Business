@@ -3,9 +3,10 @@ import axios from "axios";
 import "./CartLocator.css";
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
+
 const CartLocator = () => {
     
-    let key = process.env.REACT_APP_API_KEY
+    let key = 'AIzaSyCBUoH7IVPijpZkpZuwTdM2p8R42WC9Sl8'
     
     const containerStyle = {
         width: '400px',
@@ -20,7 +21,7 @@ const CartLocator = () => {
   return (
     <div>
         <LoadScript
-        googleMapsApiKey="AIzaSyA17-gHcEaqf8lDMELiT5T6dZ22G7rGorY"
+        googleMapsApiKey={key}
         >
         <GoogleMap 
         mapContainerStyle={containerStyle}
