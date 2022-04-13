@@ -1,15 +1,7 @@
-.landing-body{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
+.landing-container{
+ height: 150%;
+ position: absolute;
+ width: 100%;
+ overflow: hidden;
 
-.sidebar{
-    width: 25%;
-
-}
-
-.picture-body{
-    width: 75%;
-    background-color: red;
 }
