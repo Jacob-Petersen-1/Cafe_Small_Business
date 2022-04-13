@@ -7,7 +7,6 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const CartLocator = () => {
  const[marker,setMarker] = useState([])
-//  const[data, setData] = useState([])
   
   useEffect(() => {
         
@@ -31,8 +30,8 @@ const CartLocator = () => {
     let key = process.env.REACT_APP_API_KEY
     
     const containerStyle = {
-        width: '400px',
-        height: '400px'
+        width: '250px',
+        height: '300px'
       };
     
     const center = {

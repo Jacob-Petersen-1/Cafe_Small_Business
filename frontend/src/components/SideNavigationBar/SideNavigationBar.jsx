@@ -8,8 +8,6 @@ import {
   SidebarFooter,
   SidebarContent,
 } from "react-pro-sidebar";
-
-
 import {
   FiHome,
   FiArrowLeftCircle,
@@ -18,9 +16,12 @@ import {
 import { GiFoodTruck } from "react-icons/gi";
 import {BsPersonCircle,BsCalendar2CheckFill,BsInstagram} from "react-icons/bs";
 import {AiOutlineFacebook} from "react-icons/ai"
-
+import {BiMap} from "react-icons/bi"
 import "react-pro-sidebar/dist/css/styles.css";
 import "./SideNavigationBar.css";
+
+
+
 
 const SideNavigationBar = () => {
   const [menuCollapse, setMenuCollapse] = useState(false);
@@ -45,12 +46,11 @@ const SideNavigationBar = () => {
           </SidebarHeader>
           <SidebarContent>
             <Menu iconShape="square">
-              <MenuItem active={true} icon={<FiHome />}>
-                Home
-              </MenuItem>
+              <MenuItem active={true} icon={<FiHome />}>Home</MenuItem>
                 <MenuItem  icon={<BsPersonCircle />} >About</MenuItem>
                 <MenuItem icon={<BsCalendar2CheckFill/>}><Link to= "/events"/>Upcoming Events</MenuItem>
                 <MenuItem icon={<GiFoodTruck />}>Home Goods</MenuItem>
+                <MenuItem icon={<BiMap/>}>Our Location</MenuItem>
             </Menu>
           </SidebarContent>
           <SidebarFooter>
