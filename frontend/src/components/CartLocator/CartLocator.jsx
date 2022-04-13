@@ -15,16 +15,16 @@ const CartLocator = () => {
         try {
             let response = await axios.get("http://127.0.0.1:8000/map/marker/"); //Data from Database unprotected
             let formatMarker = response.data.map((m) => {
-              return {lat: parseInt(m.lat), lng : parseInt(m.lng)}
+              return {lat: parseFloat(m.lat), lng: parseFloat(m.lng)};
             });
             setMarker(formatMarker);
 
           } catch (error) {
             console.log(error.message);
-          }
+          };
         };
         fetchMarker();
-        console.log(marker)   
+        console.log(marker);   
       }, []);
       
       
@@ -35,10 +35,14 @@ const CartLocator = () => {
         height: '400px'
       };
     
-      const center = {
+    const center = {
         lat: 39.5250,
         lng: -111.5905
       };
+
+    const postion = marker[0];
+    
+    console.log("MARKER: ", postion);
 
   return (
     <div>
@@ -51,7 +55,7 @@ const CartLocator = () => {
           zoom={10}
           >
           <Marker
-          position={{lat:39.524963, lng:-111.5905}} 
+          position={postion} 
           >
           </Marker>
         </GoogleMap>
