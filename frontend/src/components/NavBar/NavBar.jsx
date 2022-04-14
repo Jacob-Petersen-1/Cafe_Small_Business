@@ -16,11 +16,6 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          {user ? (
-            <button onClick={logoutUser}>Logout</button>
-          ) : (
-            <button onClick={() => navigate("/login")}>Login</button>
-          )}
         </li>
       </ul>
     </div>
@@ -28,3 +23,9 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// {user ? (
+//   <button onClick={logoutUser}>Logout</button>
+// ) : (
+//   <button onClick={() => navigate("/login")}>Login</button>
+// )}
