@@ -15,8 +15,10 @@ const MarkerForm = () => {
             lng: lng,
         }
         console.log(newMarker)
-        await axios.post("http://127.0.0.1:8000/map/marker/", newMarker);
+        await axios.patch("http://127.0.0.1:8000/map/marker/", newMarker);
     }
+
+    
     
     
     

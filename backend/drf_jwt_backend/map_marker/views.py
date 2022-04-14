@@ -16,8 +16,9 @@ class MapMarker(APIView):
         serializers = MarkerSerializer(markers,many=True)
         return Response(serializers.data,status=status.HTTP_200_OK)
 
-    def post(self,request):
-        serializers = MarkerSerializer(data=request.data)
+    def patch(self,request,pk):
+        marker = get_object_or_404(Marker,pk=pk)
+        serializers = MarkerSerializer(marker,data=request.data)
         serializers.is_valid(raise_exception=True)
         serializers.save()
         return Response(serializers.data, status=status.HTTP_201_CREATED)
