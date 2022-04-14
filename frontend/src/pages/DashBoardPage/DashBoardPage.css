@@ -1,4 +1,9 @@
 .dash-page-container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.dash-page-content{
+    display: flex;
+    flex-direction: row;
 }

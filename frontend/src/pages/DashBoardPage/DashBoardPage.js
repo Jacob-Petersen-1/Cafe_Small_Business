@@ -3,6 +3,7 @@ import NavBar from "../../components/NavBar/NavBar"
 import SubmitEventForm from '../../components/SubmitEventForm/SubmitEventForm';
 import "./DashBoardPage.css";
 import SlideBar from '../../components/SlideBar/SlideBar';
+import WeatherWidget from '../../components/WeatherWidget/WeatherWidget';
 
 const DashBoardPage = () => {
     
@@ -11,14 +12,15 @@ const DashBoardPage = () => {
     return (
     <div>
         <NavBar/>
-        <SlideBar/>
         <div className='dash-page-container'>
             <div className='dash-page-content'>
-
-                Content
+                <SlideBar/>
+                <WeatherWidget/>
             </div>
         </div>
     </div> 
+               
+
      );
 }
  
