@@ -64,12 +64,12 @@ ul{
    background-color: rgb(32,39,56);
   }
   #header .logo {
-    padding: 10px;
+  padding: auto;
   }
 
   .logo-image{
       width: 250px;
-      margin: auto;
+      margin-left: 1rem;
   }
 
   .footer-icons{

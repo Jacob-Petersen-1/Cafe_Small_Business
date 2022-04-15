@@ -4,9 +4,14 @@ import "./LandingPage.css";
 
 const LandingPage = () => {
   return (
+    <>
+    <video src="./videos/Cafe.mp4" className="background" autoPlay loop muted
+    />
     <div className="landing-container">
       <SideNavigationBar/>
     </div>
+    
+    </>
 
     
   

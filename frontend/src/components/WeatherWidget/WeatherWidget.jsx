@@ -13,10 +13,10 @@ const WeatherWidget = () => {
    const fetchData = async () => {
      try{
       let response = await axios.get("http://127.0.0.1:8000/map/marker/");
-      const latitude = parseFloat(response.data[0].lat);
+      const latitude = Number(response.data[0].lat);
       console.log("Lat: ", latitude);
-      const longitude = parseFloat(response.data[0].lng);
-      console.log("long: ", longitude);
+      const longitude = Number(response.data[0].lng);
+      console.log("Long: ", longitude);
       let weatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${KEY}&units=imperial`);
       return setWeather(weatherResponse.data);
     } catch (error){
