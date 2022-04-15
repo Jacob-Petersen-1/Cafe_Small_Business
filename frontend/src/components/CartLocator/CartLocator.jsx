@@ -30,8 +30,8 @@ const CartLocator = () => {
     let key = process.env.REACT_APP_API_KEY
     
     const containerStyle = {
-        width: '400px',
-        height: '400px'
+        width: '100%',
+        height: '450px'
       };
     
     const center = {

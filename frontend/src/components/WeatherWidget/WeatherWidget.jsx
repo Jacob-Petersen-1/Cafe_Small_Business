@@ -49,28 +49,28 @@ const WeatherWidget = (props) => {
   
 
   return (
-    // <div>
-    //   <div class="card mb-3">
-    //     <h3 class="card-header">Weather</h3>
-    //     <div class="card-body">
-    //       <h5 class="card-title">Weather For Marker Location:</h5>
-    //     </div>
-    //     <ul class="list-group list-group-flush">
-    //       <li class="list-group-item">City: {weather.name}</li>
-    //       <li class="list-group-item">Temperature: {weather.main.temp} &deg;F</li>
-    //       <li class="list-group-item">Feels Like: {weather.main.feels_like} &deg;F</li>
-    //       <li class="list-group-item">Temperature Highs: {weather.main.temp_max} &deg;F</li>
-    //       <li class="list-group-item">Temperature Lows: {weather.main.temp_min} &deg;F</li>
-    //       <li class="list-group-item">Wind: {weather.wind.speed} MPH</li>
-    //       <li class="list-group-item">Wind Gust: {weather.wind.gust} MPH</li>
-    //       <li class="list-group-item">Humidity: {weather.main.humidity}%</li>
-    //       <li class="list-group-item">Description: {weather.weather[0].main}</li>
-    //     </ul>
-    //     <div class="card-footer text-muted">Today</div>
-    //   </div>
-    // </div>
+    <div>
+      <div class="card mb-3">
+        <h3 class="card-header">Weather</h3>
+        <div class="card-body">
+          <h5 class="card-title">Weather For Marker Location:</h5>
+        </div>
+           Update the location of the marker on the map to get weather for that location 
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">City: {weather.name}</li>
+          <li class="list-group-item">Temperature: {weather.main.temp} &deg;F</li>
+          <li class="list-group-item">Feels Like: {weather.main.feels_like} &deg;F</li>
+          <li class="list-group-item">Temperature Highs: {weather.main.temp_max} &deg;F</li>
+          <li class="list-group-item">Temperature Lows: {weather.main.temp_min} &deg;F</li>
+          <li class="list-group-item">Wind: {weather.wind.speed} MPH</li>
+          <li class="list-group-item">Wind Gust: {weather.wind.gust} MPH</li>
+          <li class="list-group-item">Humidity: {weather.main.humidity}%</li>
+          <li class="list-group-item">Description: {weather.weather[0].main}</li>
+        </ul>
+        <div class="card-footer text-muted">Today</div>
+      </div>
+    </div>
 
-    <div>Hello</div>
   );
 };
 
