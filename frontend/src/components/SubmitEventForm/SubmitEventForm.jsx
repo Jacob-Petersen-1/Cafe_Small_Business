@@ -28,15 +28,32 @@ const SubmitEventForm = () => {
     
 
     return ( 
-        <div>
-            <form className="event-form" onSubmit={handleSubmitEvent}>
-                <input type="text" placeholder="Name of Event.." id= "Title" value={title} onChange={(event) => setTitle(event.target.value)}/> 
-                <input type="date" id= "start" value={start} onChange={(event) => setStart(event.target.value)}/> 
-                <input type="date" id= "end" value={end} onChange={(event) => setEnd(event.target.value)}/> 
-                <button type="text" class="submit">Update Calendar</button>
-            </form>
+        // <div>
+        //     <form className="event-form" onSubmit={handleSubmitEvent}>
+        //         <input type="text" placeholder="Name of Event.." id= "Title" value={title} onChange={(event) => setTitle(event.target.value)}/> 
+        //         <input type="date" id= "start" value={start} onChange={(event) => setStart(event.target.value)}/> 
+        //         <input type="date" id= "end" value={end} onChange={(event) => setEnd(event.target.value)}/> 
+        //         <button type="text" class="submit">Update Calendar</button>
+        //     </form>
 
+        // </div>
+
+        <div class="card mb-3-calendar">
+        <h3 class="card-header">Add Event To Business Calendar</h3>
+        
+        In the name of the event field, be sure to add the time of the event.
+        <div class="card-body">
         </div>
+        <ul class="list-group list-group-flush">
+        <form on onSubmit={handleSubmitEvent}>
+            <li class="list-group-item"> <input type="text" placeholder="Name of Event.." id= "Title" value={title} onChange={(event) => setTitle(event.target.value)}/> </li>
+            <li class="list-group-item"><input type="date" id= "start" value={start} onChange={(event) => setStart(event.target.value)}/> </li>
+            <li class="list-group-item"><input type="date" id= "end" value={end} onChange={(event) => setEnd(event.target.value)}/></li>
+            <button type="submit" class="btn btn-primary mb-2">ADD</button>  
+        </form>
+        </ul>
+        </div>
+
      );
 }
  

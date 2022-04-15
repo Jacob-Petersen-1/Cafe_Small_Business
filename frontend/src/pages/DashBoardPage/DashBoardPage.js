@@ -5,7 +5,7 @@ import "./DashBoardPage.css";
 import SlideBar from '../../components/SlideBar/SlideBar';
 import WeatherWidget from '../../components/WeatherWidget/WeatherWidget';
 import MarkerForm from '../../components/MarkerForm/MarkerForm';
-import axios from 'axios';
+
 
 const DashBoardPage = () => {
 
@@ -23,6 +23,9 @@ const DashBoardPage = () => {
                 </div>
                 <div className='item-2'>
                     <MarkerForm/>
+                </div>
+                <div className='item-3'>
+                    <SubmitEventForm/>
                 </div>
                 
             </div>
