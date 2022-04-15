@@ -34,7 +34,7 @@ const SlideBar = () => {
               <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
             
             
-              <CDBSidebarMenuItem icon="table">Tables</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="table">Messages</CDBSidebarMenuItem>
             
             
               <CDBSidebarMenuItem icon="user">Log Out</CDBSidebarMenuItem>
