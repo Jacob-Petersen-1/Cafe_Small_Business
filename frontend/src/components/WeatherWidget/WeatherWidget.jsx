@@ -3,52 +3,39 @@ import axios from "axios";
 import "./WeatherWidget.css";
 import "bootswatch/dist/sandstone/bootstrap.min.css";
 
-const WeatherWidget = (props) => {
-  const [lat, setLat] = useState([]);
-  const [long, setLong] = useState([]);
-  const [weather, setWeather] = useState([]);
 
-  let KEY = process.env.REACT_APP_API_KEY_WEATHER;
+const WeatherWidget = () => {
+ const [weather, setWeather] = useState([]);
 
-  useEffect(() => {
-    const fetchCord = async () => {
-      try {
-        let response = axios.get("http://127.0.0.1:8000/map/marker/"); //Data from Database unprotected
-        let formatLat = response.data.map((m) => {
-          return parseFloat(m.lat);
-        });
-        setLat(formatLat);
-        let formatLon = response.data.map((m) => {
-          return parseFloat(m.lng);
-        });
-        setLong(formatLon);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-    fetchCord();
-    const latitude = lat[0];
-    const longitude = long[0];
-    console.log("LAT: ", lat);
-    console.log("LON: ", long);
-    const fetchWeather = async () => {
-      try {
-        let weatherResponse = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${KEY}&units=imperial`
-        );
-        return setWeather(weatherResponse.data);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-    fetchWeather();
-    console.log("Weather: ", weather);
-  }, []);
+ let KEY = process.env.REACT_APP_API_KEY_WEATHER;
 
+ useEffect(() => {
+   const fetchData = async () => {
+     try{
+      let response = await axios.get("http://127.0.0.1:8000/map/marker/");
+      const latitude = parseFloat(response.data[0].lat);
+      const longitude = parseFloat(response.data[0].lng);
+      let weatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${KEY}&units=imperial`);
+       return setWeather(weatherResponse.data);
+     } catch (error){
+       console.log(error.message);
+     };
+   };
+   fetchData();
+   console.log("weather: ", weather);
+ }, []);
 
-  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
-  return (
+   
+ return (
     <div>
       <div class="card mb-3">
         <h3 class="card-header">Weather</h3>
@@ -70,6 +57,9 @@ const WeatherWidget = (props) => {
         <div class="card-footer text-muted">Today</div>
       </div>
     </div>
+    
+ 
+
 
   );
 };
