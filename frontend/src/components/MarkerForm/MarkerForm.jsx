@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import CartLocator from '../CartLocator/CartLocator';
 
 
 const MarkerForm = () => {
@@ -24,7 +25,7 @@ const MarkerForm = () => {
     
     return (  
         <div>
-            <form on onSubmit={handleSubmitMarker}>
+            {/* <form on onSubmit={handleSubmitMarker}>
                 <div class="form-row">
                     <div class="col-7">
                         <input type="text" class="form-control" placeholder="Location" value={address} onChange={(m) => setAddress(m.target.value)}/>
@@ -36,11 +37,32 @@ const MarkerForm = () => {
                         <input type="text" class="form-control" placeholder="Longitude" value={lng} onChange={(m) => setLng(m.target.value)}/>
                     </div>
                     <div class="col">
-                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                        <button type="submit" class="btn btn-primary mb-2">Update</button>
                     </div>
                 </div>
-            </form>
-        </div>
+            </form> */}
+        
+            <div class="card mb-3">
+                        <h3 class="card-header">Update Location</h3>
+                        <div class="card-body">
+                            <h5 class="card-title">Current Marker Location</h5>
+                        </div>
+                        <div>
+                            <CartLocator/> 
+                        </div>
+                        <div class="card-body">
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <form on onSubmit={handleSubmitMarker}>
+                            <li class="list-group-item"><input type="text" class="form-control" placeholder="Location Name/Description" value={address} onChange={(m) => setAddress(m.target.value)}/></li>
+                            <li class="list-group-item"><input type="text" class="form-control" placeholder="Latitude" value={lat} onChange={(m) => setLat(m.target.value)}/></li>
+                            <li class="list-group-item"><input type="text" class="form-control" placeholder="Longitude" value={lng} onChange={(m) => setLng(m.target.value)}/></li>
+                            <button type="submit" class="btn btn-primary mb-2">Update</button>  
+                        </form>
+                        </ul>
+                        </div>
+            </div>
+
             
     );
 

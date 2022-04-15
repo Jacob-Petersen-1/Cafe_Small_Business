@@ -2,3 +2,9 @@ h3.card-header{
     background-color:rgb(1,87,155);
     color:white;
 }
+
+.card.mb-3{
+    width: 600px;
+    height: 700px;
+    
+}
