@@ -1,9 +1,9 @@
 .landing-container{
- height: 150%;
- position: absolute;
+display: flex;
+ height: 100%;
  width: 100%;
  overflow: hidden;
-
+ flex-direction: row;
 }
 .background{
     width: 100%;
@@ -12,4 +12,13 @@
     object-fit: cover;
     z-index: -1;
 
+}
+
+.locator{
+    width: 800px;
+}
+
+.sidebar{
+    z-index: +1;
+    position: absolute;
 }

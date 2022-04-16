@@ -15,10 +15,11 @@ import {
 } from "react-icons/fi";
 import { GiFoodTruck } from "react-icons/gi";
 import {BsPersonCircle,BsCalendar2CheckFill,BsInstagram} from "react-icons/bs";
-import {AiOutlineFacebook} from "react-icons/ai"
+import {AiOutlineFacebook,AiOutlineContainer} from "react-icons/ai"
 import {BiMap} from "react-icons/bi"
 import "react-pro-sidebar/dist/css/styles.css";
 import "./SideNavigationBar.css";
+import CartLocator from "../CartLocator/CartLocator";
 
 
 
@@ -50,15 +51,12 @@ const SideNavigationBar = () => {
                 <MenuItem  icon={<BsPersonCircle />} >About</MenuItem>
                 <MenuItem icon={<BsCalendar2CheckFill/>}><Link to= "/events"/>Upcoming Events</MenuItem>
                 <MenuItem icon={<GiFoodTruck />}>Home Goods</MenuItem>
-                <MenuItem icon={<BiMap/>}>Our Location</MenuItem>
+                <MenuItem icon={<AiOutlineContainer />}>Contact</MenuItem>
             </Menu>
           </SidebarContent>
           <SidebarFooter>
-            <div className="footer-icons">
-                Follow us!  
-                <AiOutlineFacebook className="icon-social"/>
-                <BsInstagram className="icon-social"/> 
-            </div>
+            Current Location:
+            <CartLocator className="footer-map"/>
 
           </SidebarFooter>
         </ProSidebar>
