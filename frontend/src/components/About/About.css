@@ -1,0 +1,12 @@
+.about{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 105vh;
+}
+
+.about-image{
+    width: 100%;
+  
+}
