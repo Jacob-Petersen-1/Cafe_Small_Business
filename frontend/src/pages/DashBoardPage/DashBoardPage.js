@@ -5,6 +5,7 @@ import "./DashBoardPage.css";
 import SlideBar from '../../components/SlideBar/SlideBar';
 import WeatherWidget from '../../components/WeatherWidget/WeatherWidget';
 import MarkerForm from '../../components/MarkerForm/MarkerForm';
+import MessageBoard from '../../components/MessageBoard/MessageBoard';
 
 
 const DashBoardPage = () => {
@@ -20,6 +21,7 @@ const DashBoardPage = () => {
                 </div>
                 <div className='item-1'>
                     <WeatherWidget/>
+                    <MessageBoard/>
                 </div>
                 <div className='item-2'>
                     <MarkerForm/>
