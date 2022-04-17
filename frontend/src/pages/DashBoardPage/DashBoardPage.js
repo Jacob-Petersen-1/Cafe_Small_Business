@@ -23,11 +23,8 @@ const DashBoardPage = () => {
                 </div>
                 <div className='item-2'>
                     <MarkerForm/>
-                </div>
-                <div className='item-3'>
                     <SubmitEventForm/>
                 </div>
-                
             </div>
         </div>
     </div> 

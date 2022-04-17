@@ -42,16 +42,8 @@ const MarkerForm = () => {
                 </div>
             </form> */}
         
-            <div class="card mb-3">
+            <div class="card mb-3-weather">
                         <h3 class="card-header">Update Location</h3>
-                        <div class="card-body">
-                            <h5 class="card-title">Current Marker Location</h5>
-                        </div>
-                        <div>
-                            <CartLocator/> 
-                        </div>
-                        <div class="card-body">
-                        </div>
                         <ul class="list-group list-group-flush">
                         <form on onSubmit={handleSubmitMarker}>
                             <li class="list-group-item"><input type="text" class="form-control" placeholder="Location Name/Description" value={address} onChange={(m) => setAddress(m.target.value)}/></li>

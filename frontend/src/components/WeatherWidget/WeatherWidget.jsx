@@ -41,9 +41,6 @@ const WeatherWidget = () => {
     <div>
       <div class="card mb-3">
         <h3 class="card-header">Weather</h3>
-        <div class="card-body">
-          <h5 class="card-title">Weather For Marker Location:</h5>
-        </div>
            Update the location of the marker on the map to get weather for that location 
         <ul class="list-group list-group-flush">
           <li class="list-group-item">City: {weather.name}</li>
@@ -59,6 +56,7 @@ const WeatherWidget = () => {
         <div class="card-footer text-muted">Today</div>
       </div>
     </div>
+
    
     
  
