@@ -1,12 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .about{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 105vh;
+display: flex;
+align-items: center;
+min-height: 100vh;
+justify-content: flex-start;
+flex-direction: column;
+padding: 50px;
 }
 
 .about-image{
-    width: 100%;
-  
+   width: 500px;
+   height: 500px;
+   border-radius: 50%;
+   padding: 20px; 
+}
+
+.portfolio{
+   display: flex;
+   align-items: center;
+   padding: 5rem;
+   margin-left: 20%;
+}
+
+h1.title{
+   font-family: 'Bebas Neue';
+   font-size: 80px;
 }
