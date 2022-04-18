@@ -1,0 +1,15 @@
+.calendar-title{
+   padding: 1rem;
+   color:white;
+   background-color: rgb(55,136,216);
+   box-shadow: black; 
+}
+
+.thead{
+   background-color: rgb(55,136,216) ;
+}
+
+a {
+   color: black
+}
+

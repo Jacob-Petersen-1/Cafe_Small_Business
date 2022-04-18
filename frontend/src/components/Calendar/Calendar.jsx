@@ -6,6 +6,7 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import "./Calendar.css"
 import { Link } from "react-router-dom";
+import "bootswatch/dist/sandstone/bootstrap.min.css";
 
 const Calendar = () => {
  const [events, setEvents] = useState([]);
@@ -34,7 +35,7 @@ const Calendar = () => {
         <div className="calendar">
             <div className='calendar-main'>
               <div className='back-home'>
-                <Link to="/"><button>Back to Home</button></Link>
+                <Link to="/"><button class="btn btn-lg btn-primary" type="button">Back to Home</button></Link>
               </div>
                 <FullCalendar
                 plugins={[dayGridPlugin,timeGridPlugin,interactionPlugin]}

@@ -1,4 +1,5 @@
 import Calendar from "../../components/Calendar/Calendar"
+import "./EventPage.css"
 
 
 
@@ -7,7 +8,7 @@ const EventPage = () => {
 
      
      <div>
-         <h1>Calendar</h1>
+         <h1 className="calendar-title">Rissa Cafe Upcoming Events</h1>
          <Calendar/>
      </div>
      
