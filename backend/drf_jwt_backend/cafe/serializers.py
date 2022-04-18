@@ -8,10 +8,10 @@ class UserSerializer(serializers.ModelSerializer):
        fields = ["id","first_name", "last_name"]
 
 class CustomerSerializer(serializers.ModelSerializer):
-    user = UserSerializer(many=False, read_only=True)
+    # user = UserSerializer(many=False, read_only=True)
     class Meta:
         model = Customer
-        fields = ["id","first_name", "last_name", "phone", "email", "message", "user"]
+        fields = ["id","first_name", "last_name", "phone", "email", "message"]
         depth = 1
 
 class BusinessEventSerializer(serializers.ModelSerializer):
@@ -24,6 +24,6 @@ class PersonalEventSerializer(serializers.ModelSerializer):
         model = PersonalEvent
         fields = ["id","title","start","end"]
 
-customer_id = serializers.IntegerField(write_only = True)
+# customer_id = serializers.IntegerField(write_only = True)
 
 

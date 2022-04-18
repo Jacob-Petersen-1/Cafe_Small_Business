@@ -21,6 +21,7 @@ import "./SideNavigationBar.css";
 import CartLocator from "../CartLocator/CartLocator";
 import {Modal, Button} from 'react-bootstrap';
 import "bootswatch/dist/sandstone/bootstrap.min.css";
+import axios from "axios";
 
 
 
@@ -33,6 +34,25 @@ const SideNavigationBar = () => {
   const [menuCollapse, setMenuCollapse] = useState(false);
   const menuIconClick = () => {
     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
+  };
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  async function handleSubmitMessage(m){
+    m.preventDefault();
+    let newMessage = {
+      first_name: first_name,
+      last_name: last_name,
+      phone: phone,
+      email: email,
+      message: message,
+    }
+    console.log(newMessage);
+    await axios.post("http://127.0.0.1:8000/messages/send/", newMessage, {
+    });
   };
 
   return (
@@ -71,39 +91,39 @@ const SideNavigationBar = () => {
             </Modal.Header>
             <Modal.Body>
             <div class="form-group">
-              <form>
+              <form onSubmit={handleSubmitMessage}>
                   <label class="form-label mt-4">Contact Info: </label>
                     <div class="form-floating mb-3">
-                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value={email} onChange={(event) => setEmail(event.target.value)}/>
                       <label for="floatingInput">Email address</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="floatingPhone" placeholder="Last Name"/>
+                      <input type="text" class="form-control" id="floatingPhone" placeholder="Last Name"value={phone} onChange={(event) => setPhone(event.target.value)}/>
                       <label for="floatingPhone">Phone Number</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="floatingFirst" placeholder="First Name"/>
+                      <input type="text" class="form-control" id="floatingFirst" placeholder="First Name" value={first_name} onChange={(event) => setFirstName(event.target.value)}/>
                       <label for="floatingFirst">First Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="floatingSecond" placeholder="Last Name"/>
+                      <input type="text" class="form-control" id="floatingSecond" placeholder="Last Name" value={last_name} onChange={(event) => setLastName(event.target.value)}/>
                       <label for="floatingSecond">Last Name</label>
                     </div>
 
                     <div class="form-group">
                       <label for="exampleTextarea" class="form-label mt-4">Message</label>
-                      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                      <textarea class="form-control" id="exampleTextarea" rows="3" value={message} onChange={(event) => setMessage(event.target.value)}></textarea>
                     </div>
+                        <Modal.Footer>
+                          <Button variant="primary" type="submit" onClick={handleClose}>
+                            Submit 
+                          </Button>
+                        </Modal.Footer>
                   </form>
               </div>
-
             </Modal.Body>
-            <Modal.Footer>
-              <Button variant="primary">
-                Submit 
-              </Button>
-            </Modal.Footer>
+
       </Modal>
 
         </div>
