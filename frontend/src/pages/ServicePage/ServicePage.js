@@ -1,11 +1,14 @@
 import SideNavigationBar from "../../components/SideNavigationBar/SideNavigationBar";
+import ProductSlider from "../../components/ProductSlider/ProductSlider";
 
-const OrderPage = () => {
+const ServicePage = () => {
     return ( 
         <div>
             <SideNavigationBar/>
+            {/* <ProductSlider /> */}
+
         </div>
      );
 }
  
-export default OrderPage;
+export default ServicePage;

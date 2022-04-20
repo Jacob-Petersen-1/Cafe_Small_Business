@@ -7,7 +7,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import DashBoardPage from "./pages/DashBoardPage/DashBoardPage"
 import LandingPage from "./pages/LandingPage/LandingPage";
 import EventPage from "./pages/EventPage/EventPage";
-import OrderPage from "./pages/OrderPage/OrderPage";
+import ServicePage from "./pages/ServicePage/ServicePage"
 
 // Component Imports
 
@@ -29,7 +29,7 @@ function App() {
         <Route path="/events" element = {<EventPage/>}/>
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/order" element={<OrderPage />} />
+        <Route path="/services" element={<ServicePage />} />
       </Routes>
     </div>
   );

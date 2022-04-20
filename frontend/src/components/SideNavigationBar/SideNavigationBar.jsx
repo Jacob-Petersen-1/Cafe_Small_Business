@@ -78,7 +78,7 @@ const SideNavigationBar = () => {
               <MenuItem active={true} icon={<FiHome />}><Link to= "/" />Home</MenuItem>
                 <MenuItem  icon={<BsPersonCircle />} >About</MenuItem>
                 <MenuItem icon={<BsCalendar2CheckFill/>}><Link to= "/events"/>Upcoming Events</MenuItem>
-                <MenuItem icon={<GiFoodTruck />}><Link to="/order" /> Online Order</MenuItem>
+                <MenuItem icon={<GiFoodTruck />}><Link to="/services" /> What We Offer</MenuItem>
                 <MenuItem icon={<AiOutlineContainer />} onClick={handleShow}>Contact</MenuItem>
             </Menu>
           </SidebarContent>
