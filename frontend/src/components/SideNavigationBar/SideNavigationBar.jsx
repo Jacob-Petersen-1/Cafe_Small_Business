@@ -28,19 +28,22 @@ import axios from "axios";
 
 
 const SideNavigationBar = () => {
+ //Contact Modal
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  //Menu Logic
   const [menuCollapse, setMenuCollapse] = useState(false);
   const menuIconClick = () => {
     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
   };
+  //Data Being Sent to Backend
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-
+  //Post Method to Database
   async function handleSubmitMessage(m){
     m.preventDefault();
     let newMessage = {
@@ -72,10 +75,10 @@ const SideNavigationBar = () => {
           </SidebarHeader>
           <SidebarContent>
             <Menu iconShape="square">
-              <MenuItem active={true} icon={<FiHome />}>Home</MenuItem>
+              <MenuItem active={true} icon={<FiHome />}><Link to= "/" />Home</MenuItem>
                 <MenuItem  icon={<BsPersonCircle />} >About</MenuItem>
                 <MenuItem icon={<BsCalendar2CheckFill/>}><Link to= "/events"/>Upcoming Events</MenuItem>
-                <MenuItem icon={<GiFoodTruck />}>Home Goods</MenuItem>
+                <MenuItem icon={<GiFoodTruck />}><Link to="/order" /> Online Order</MenuItem>
                 <MenuItem icon={<AiOutlineContainer />} onClick={handleShow}>Contact</MenuItem>
             </Menu>
           </SidebarContent>
@@ -85,6 +88,8 @@ const SideNavigationBar = () => {
           </SidebarFooter>
         </ProSidebar>
         <div>
+          
+          {/* Contact Modal */}
         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
               <Modal.Title>CONTACT US!</Modal.Title>
@@ -124,9 +129,8 @@ const SideNavigationBar = () => {
               </div>
             </Modal.Body>
 
-      </Modal>
-
-        </div>
+      </Modal>  
+       </div>
       </div>
     </>
   );
