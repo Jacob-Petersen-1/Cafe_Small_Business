@@ -46,8 +46,9 @@ const ProductSlider = () => {
                             <div className="content">
                                 <h2>{slide.heading}</h2>
                                 <p>{slide.desc}</p>
-                                <button type="button" class="contact-button">Contact</button>
+                                <hr></hr>
                             </div>
+                            
                         </>
                         )}
                         
