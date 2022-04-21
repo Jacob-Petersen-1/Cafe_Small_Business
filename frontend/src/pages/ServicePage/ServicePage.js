@@ -5,9 +5,9 @@ const ServicePage = () => {
     return ( 
         <div>
             <SideNavigationBar/>
-            {/* <ProductSlider /> */}
-
+            <ProductSlider />
         </div>
+
      );
 }
  
