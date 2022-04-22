@@ -1,7 +1,11 @@
-# ReactDjango_JWT_StarterCode
+This application was created as part of my capstone project for devCodeCamp. This application features a landing page displaying all of the business services, homegoods, ect. This application also has a unique feature of a business owner dashboard. Allowing the business owner to login, and update some of the features of the web application. I am actively making adjustments and testing out new features.
 
-Starter code for full stack React + Django applications using JWT for authentication/authorization and a fully working register/login system on the React side
+Landing Page
+![](images/Home.png)
 
-## NOTE
+Services Page
+![](public/images/Services.png)
 
-"cars" app in Django backend for example purposes only. Study it closely and review provided resources to understand how to properly create protected endpoints that require a JWT token for authorization.
+Owner Dashboard
+![](images/OwnerDashBoard.png)
+
