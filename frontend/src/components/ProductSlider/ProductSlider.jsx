@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 import "./ProductSlider.css";
 import { ProductSliderData } from './ProductSliderData';
-import "bootswatch/dist/lux/bootstrap.min.css";
+
 
 const ProductSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
