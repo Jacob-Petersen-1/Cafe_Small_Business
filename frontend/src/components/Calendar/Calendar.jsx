@@ -7,26 +7,27 @@ import interactionPlugin from '@fullcalendar/interaction'
 import "./Calendar.css"
 import { Link } from "react-router-dom";
 import "bootswatch/dist/sandstone/bootstrap.min.css";
+import SubmitEventForm from '../SubmitEventForm/SubmitEventForm';
 
 const Calendar = () => {
  const [events, setEvents] = useState([]);
 
  
  
-
+ const fetchEvents = async () => {
+     try {
+         let response = await axios.get("http://127.0.0.1:8000/business/events/"); //Data from Database unprotected
+         setEvents(response.data);
+         console.log("EVENT DATA:",response.data)
+       } catch (error) {
+         console.log(error.message);
+       }
+     };
+ 
 
     useEffect(() => {
         
-      const fetchEvents = async () => {
-          try {
-              let response = await axios.get("http://127.0.0.1:8000/business/events/"); //Data from Database unprotected
-              setEvents(response.data);
-            } catch (error) {
-              console.log(error.message);
-            }
-          };
         fetchEvents();
-        console.log("EVENT DATA:",events)
       }, []);
       
       
@@ -52,6 +53,7 @@ const Calendar = () => {
                
 
             </div>
+            <SubmitEventForm fetchEvents={fetchEvents} />
         </div>
 
 );

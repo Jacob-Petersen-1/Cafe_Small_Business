@@ -3,7 +3,7 @@ import axios from "axios";
 import useAuth from "../../hooks/useAuth"
 
 
-const SubmitEventForm = () => {
+const SubmitEventForm = ({fetchEvents}) => {
     const[user, token] = useAuth();
     const [title, setTitle] = useState("");
     const [start, setStart] = useState("");
@@ -24,6 +24,7 @@ const SubmitEventForm = () => {
             Authorization: 'Bearer ' + token
           }
         });
+        fetchEvents()
       }
     
 
