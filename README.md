@@ -2,7 +2,7 @@ This application was created as part of my capstone project for devCodeCamp. Thi
 
 Technologies: React, JavaScript, HTML/CSS, Django, Django REST Framework, MySQL, Axios, and Postman
 Full Project Walk-Through
-`[Full Project Walkthrough](https://www.youtube.com/watch?v=EdFpKMegHhw)`
+[Full Project Walkthrough](https://www.youtube.com/watch?v=EdFpKMegHhw)
 
 Landing Page
 <img src="frontend/public/images/Home.png">
