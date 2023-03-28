@@ -9,5 +9,5 @@ Services Page
 <img src="frontend/public/images/Services.png">
 
 Owner Dashboard
-<img src="frontend/public/images/OwnerDashBoard.png">
+
 
